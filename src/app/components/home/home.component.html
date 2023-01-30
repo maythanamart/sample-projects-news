@@ -46,7 +46,7 @@
             <div *ngIf="flagEdit" class="p-col-12" style="font-weight: bold; margin-top: 10px;">
                 <label class="label-primary">สถานะ</label>
                 <div class="field mt-1" style="height: 85%;">
-                    <p-inputSwitch [(ngModel)]="currentNews.Status" (click)="updateStatus(currentNews.NewsId)"></p-inputSwitch>
+                    <p-inputSwitch [(ngModel)]="currentNews.StatusBool" (click)="updateStatus(currentNews.NewsId)"></p-inputSwitch>
                 </div>
             </div>
         </div>
