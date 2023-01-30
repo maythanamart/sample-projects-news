@@ -13,7 +13,7 @@
         </ng-template>
         <ng-template pTemplate="body" let-i="rowIndex" let-news>
             <tr>
-                <td><p-inputSwitch [(ngModel)]="news.StatusBool" (click)="updateStatus(news.NewsId)"></p-inputSwitch></td>
+                <td><p-inputSwitch [(ngModel)]="news.StatusBool" (click)="updateStatus(news.NewsId, news.StatusBool)"></p-inputSwitch></td>
                 <td>{{i + 1}}</td>
                 <td>{{news.NameNews}}</td>
                 <td>{{news.UpdatedDate}}</td>
@@ -46,7 +46,7 @@
             <div *ngIf="flagEdit" class="p-col-12" style="font-weight: bold; margin-top: 10px;">
                 <label class="label-primary">สถานะ</label>
                 <div class="field mt-1" style="height: 85%;">
-                    <p-inputSwitch [(ngModel)]="currentNews.StatusBool" (click)="updateStatus(currentNews.NewsId)"></p-inputSwitch>
+                    <p-inputSwitch [(ngModel)]="currentNews.StatusBool" (click)="updateStatus(currentNews.NewsId, currentNews.StatusBool)"></p-inputSwitch>
                 </div>
             </div>
         </div>

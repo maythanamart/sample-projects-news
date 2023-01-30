@@ -36,11 +36,11 @@ export class AppService {
       });
   }
 
-  async updateStatusNews(id: string, status: number) {
+  async updateStatusNews(id: string, status: boolean) {
     const formData = new FormData();
     formData.append('EmployeeId', '3');
     formData.append('NewsId', id);
-    formData.append('Status', status.toString());
+    formData.append('Status', status ? '1' : '0');
     return this.http.post<BaseResponse<any>>(`${environment.ed_api}/ED-UpdateStatusNews`, formData)
       .toPromise().then((res: any) => {
         if (!res.successful) {

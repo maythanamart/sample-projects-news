@@ -25,9 +25,8 @@ export class HomeComponent implements OnInit {
     this.appService.getNews(3).then(res => this.news = res);
   }
 
-  updateStatus(id: number) {
-    var currentStatus = this.news.find(x => x.NewsId == id)?.Status || 0;
-    this.appService.updateStatusNews(id.toString(), currentStatus).then(_ => this.refreshNews());
+  updateStatus(id: number, status: boolean) {
+    this.appService.updateStatusNews(id.toString(), status).then(_ => this.refreshNews());
   }
 
   viewDetail(id: number) {
