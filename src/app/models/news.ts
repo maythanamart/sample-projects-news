@@ -6,7 +6,7 @@ export class News {
     NameNews!: string
     Detail!: string
     Status!: number
-    UpdatedDate!: string
+    UpdatedDate!: Date
     ButtonView!: number
     ButtonEdit!: number
     ButtonDelete!: number

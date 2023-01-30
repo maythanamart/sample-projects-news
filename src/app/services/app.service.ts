@@ -24,7 +24,7 @@ export class AppService {
         if (res.successful) {
           if (res.data) {
             res.data.forEach((d: any) => {
-              d.UpdatedDate = d.UpdatedDate ? moment(d.UpdatedDate, 'DD/MM/YYYY').toDate() : null;
+              d.UpdatedDate = d.UpdatedDate ? moment(d.UpdatedDate).format('DD/MM/YYYY') : null;
             });
             return res.data.map((x: any) => new News(x));
           } else {
